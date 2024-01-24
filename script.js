@@ -1,8 +1,8 @@
 "use strict";
 
 const plants = {
-    name:
-    species:
+    Name:
+    species;
     water:
 };
 console.log(plants)
