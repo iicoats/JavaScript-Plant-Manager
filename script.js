@@ -1,28 +1,31 @@
 "use strict";
 
 const plants = {
-    Name:
-    species;
-    water:
+    Name: suflower,
+    species: sunflower,
+    water: weekly,
 };
 console.log(plants)
 
 const plant = [];
+
 plant.push(plants)
 
 function displayPlants(){
     const plantList = document.getElementById(plantList)
     plantList.innerHTML="";
-    plant.forEach(plant){
+   
+    plant.forEach((plant){
         const li=document.createElement("li")
 
-    li.textContent= Name: ${plant.name},
-    species: ${plant.species}, water_schedule: ${plant.water};
+    li.innerHTML = `Name: ${plant.name}
+    species: ${plant.species}, water_schedule: ${plant.water}`;
     plantList.appendChild(li);
 
-    }
+    });
 };
 
+addPlantFromForm();
 function addPlant(name, species, water){
     const newPlant = { name, species, water};
     plant.push(newPlant);
@@ -30,7 +33,7 @@ function addPlant(name, species, water){
 
 Form.addEventListener("submit", addPlantFromForm)
 
-function addBookFromForm(event){
+function addPlantFromForm(event){
     event.preventDefault();
 }
 

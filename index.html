@@ -6,14 +6,17 @@
     <title>Plant Management</title>
   </head>
   <body>
-    <form method="post" action="index.html" id="plant" input type="submit">
-      <div class="plant">
-        <label for="name">
+    
+    <form id="plants">
+      <div class="plants">
+        <label for="Name">
           <input type="text" name="name" placeholder="Enter plant name" />
         </label>
-        <label for="species">
+       
+        <label for="Species">
           <input type="text" name="species" placeholder="Enter species" />
         </label>
+       
         <label for="water">
           <input type="text" name="water" placeholder="water" />
         </label>
@@ -21,6 +24,7 @@
       <button>Add Plant</button>
     </form>
 
+<h3>Current plant list</h3>
     <ul id="plantList">
       <li></li>
     </ul>
