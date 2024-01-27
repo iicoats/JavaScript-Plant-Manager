@@ -1,21 +1,21 @@
 "use strict";
 
-const plants = {
-    Name: suflower,
-    species: sunflower,
-    water: weekly,
+const plant2= {
+    name: "suflower",
+    species: "sunflower",
+    water: "weekly",
 };
-console.log(plants)
 
-const plant = [];
 
-plant.push(plants)
+const plants = [];
+
+plants.push(plant2)
 
 function displayPlants(){
-    const plantList = document.getElementById(plantList)
+    const plantList = document.getElementById("plantList")
     plantList.innerHTML="";
    
-    plant.forEach((plant){
+    plants.forEach ((plant) =>{
         const li=document.createElement("li")
 
     li.innerHTML = `Name: ${plant.name}
@@ -25,24 +25,26 @@ function displayPlants(){
     });
 };
 
-addPlantFromForm();
+const form = document.getElementById("plants")
+
 function addPlant(name, species, water){
     const newPlant = { name, species, water};
-    plant.push(newPlant);
+    plants.push(newPlant);
 }
 
-Form.addEventListener("submit", addPlantFromForm)
+form.addEventListener("submit", addPlantFromForm)
 
 function addPlantFromForm(event){
     event.preventDefault();
-}
 
-const Name=form.Name.value;
+
+const name=form.name.value;
 const species=form.species.value;
 const water=form.water.value;
 
-addPlant(Name, species, water);
+addPlant(name, species, water);
 form.reset();
+displayPlants();
+}
 
-addPlant(Name, species, water);
 displayPlants();
