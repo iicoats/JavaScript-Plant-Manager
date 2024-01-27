@@ -47,4 +47,19 @@ form.reset();
 displayPlants();
 }
 
+
+
+function addPlant(name, species, water) {
+    const newPlant = {name, species, water};
+
+    plants.push(newPlant);
+
+    savePlantsToLocalStorage() {
+        const storedPlants = localStorage.getItem("plants");
+        if (storedPlants) {
+            plants.push(...JSON.parse(storedPlants));
+        }
+    }
+}
+
 displayPlants();
